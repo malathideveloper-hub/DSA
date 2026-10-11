@@ -21,4 +21,8 @@ s=['h', 'e', 'l', 'l', 'o']
 print(f"Before Reverse : {s}")
 print(f"After Reverse : {reverseString(s)}")
 
+# Complexity:
 
+# Time: O(n) — approximately half the characters are swapped.
+
+# Extra space: O(1) — only two pointers and a temporary reference are needed.
