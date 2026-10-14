@@ -5,7 +5,6 @@
 
 # Example 1:
 # Input : s = "tree"
-
 # Output : ['e', 'r', 't' ]
 
 # Explanation :
@@ -27,7 +26,16 @@ def frequencySort(s):
     print("frequency : ",freq)
     #You need to sort using two rules:
     # Frequency — highest to lowest.
+    ch=list(freq.keys())
     # Alphabetical order — A to Z when frequencies are equal.
-
+    ch.sort()
+    print("ch : ",ch)
+    #store based on albhsbetical order
+    for i in range(len(ch)):
+        for j in range(i+1,len(ch)):
+            #check the freq
+            if freq[ch[i]]<freq[ch[j]]:
+                ch[i],ch[j]=ch[j],ch[i]
+        return ch
 s = "tree"
 print(frequencySort(s))
