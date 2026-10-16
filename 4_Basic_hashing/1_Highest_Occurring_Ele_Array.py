@@ -10,7 +10,7 @@
 
 # Explanation: The number 3 appears the most (3 times). It is the most frequent element.
 
-nums = [1, 2, 2, 3, 3, 3]
+nums = [1, 2, 2, 2, 3, 3, 3]
 
 f=dict()
 
