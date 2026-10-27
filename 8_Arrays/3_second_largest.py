@@ -22,6 +22,22 @@ def secondLargestElement(nums):
     return largest
 # Above approach takes (O(n log n)) time and (O(n)) extra space.
 
+def secondLargestElement_optimized(nums):
+    largest = float("-inf")
+    second_largest=float("-inf")  
+    for num in nums:
+        if num>largest:
+            second_largest=largest
+            largest=num
+        elif largest>num and num>second_largest:
+            second_largest=num
+
+    if second_largest == float("-inf"):
+        return -1
+    return second_largest
+# Above approach takes (O(n)) time and (O(1)) extra space.
+
 nums = [8, 8, 7, 6, 5]
 # nums=[10,10,10,10,10,10]
 print(secondLargestElement(nums))
+print(secondLargestElement_optimized(nums))
