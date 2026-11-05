@@ -22,3 +22,32 @@
 
 # The element 3 appears in both arrays two times so we add element 3 equal to its number of occurrences.
 
+def intersection(nums1, nums2):
+    result = []
+    i = 0
+    j = 0
+    while i < len(nums1) and j < len(nums2):
+        if nums1[i] == nums2[j]:
+            result.append(nums1[i])
+            i+=1
+            j+=1
+
+        elif nums1[i] < nums2[j]:
+            i+=1
+
+        else:
+            j+=1
+
+    return result
+    
+nums1 = [1, 2, 2, 3, 5]
+nums2 = [1, 2, 7]
+
+print(intersection(nums1, nums2))
+
+
+# Complexity analysis
+# Complexity	        Value
+# Time	            O(n + m)
+# Auxiliary space	    O(1)
+# Output space	    O(min(n, m))
