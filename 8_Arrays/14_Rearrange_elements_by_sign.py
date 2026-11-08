@@ -11,3 +11,27 @@
 # Explanation:
 
 # The positive number 2, 4, 5 maintain their relative positions and -1, -3, -4 maintain their relative positions
+
+# My brute force approach
+nums=[3, -5, 8, -2, 9, -7]
+
+ptive=[]
+ntive=[]
+
+for i in nums:
+    if i>0:
+        ptive.append(i)
+    else:
+        ntive.append(i)
+        
+# print(ptive)
+# print(ntive)
+
+n=len(nums)//2
+# print(n)
+res=[]
+for i in range(n):
+    res.append(ptive[i])
+    res.append(ntive[i])
+    
+print(res)
