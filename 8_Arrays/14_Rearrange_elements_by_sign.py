@@ -35,3 +35,27 @@ for i in range(n):
     res.append(ntive[i])
     
 print(res)
+
+#My Optimised Approch
+
+nums = [2, 4, 5, -1, -3, -4]
+
+res = [None] * len(nums)
+
+p = 0
+n = 1
+
+for i in nums:
+    if i > 0:
+        # Place positive number
+        res[p]=i
+        # Increment p by 2
+        p+=2
+
+    else:
+        # Place negative number
+        res[n]=i
+        # Increment n by 2
+        n+=2
+
+print(res)
