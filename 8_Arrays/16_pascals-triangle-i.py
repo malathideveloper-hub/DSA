@@ -27,3 +27,28 @@
 # 1 3 3 1
 
 # Thus, value at row 4 and column 2 = 3
+
+
+def pascalElement(r, c):
+    n = r - 1
+    k = c - 1
+
+    # Use symmetry to minimize iterations
+    k = min(k, n - k)
+
+    result = 1
+
+    for i in range(1, k + 1):
+        result = result * (n - i + 1) // i
+
+    return result
+
+
+r = 5
+c = 3
+
+print(pascalElement(r, c))
+
+# Complexity
+# - Time: (O(min(c-1, r-c)))
+# - Auxiliary space: (O(1))
